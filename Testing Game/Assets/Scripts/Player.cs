@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "Platform")
         {
-            isJumping = true;
+            isJumping = false;
         }
     }
 }
