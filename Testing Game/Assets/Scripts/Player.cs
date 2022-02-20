@@ -38,4 +38,12 @@ public class Player : MonoBehaviour
     {
         rb.velocity = Vector2.up * JumpForce;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Platform")
+        {
+            isJumping = true;
+        }
+    }
 }
