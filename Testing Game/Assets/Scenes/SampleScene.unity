@@ -176,7 +176,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -427,7 +427,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!60 &988082658
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -491,7 +491,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   rb: {fileID: 988082657}
-  direction: {x: 0, y: 0}
+  direction: 0
+  JumpForce: 15
 --- !u!114 &988082660
 MonoBehaviour:
   m_ObjectHideFlags: 0
