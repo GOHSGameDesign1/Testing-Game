@@ -642,10 +642,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Square (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 8897023159004293247, guid: ad32e05a397a715458afcb0d2a707564, type: 3}
-      propertyPath: m_TagString
-      value: Respawn
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad32e05a397a715458afcb0d2a707564, type: 3}
 --- !u!1001 &2594345793950124088
