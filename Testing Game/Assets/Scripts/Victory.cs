@@ -21,7 +21,7 @@ public class Victory : MonoBehaviour
     {
         if (collision.gameObject.tag == "Victory")
         {
-            Debug.Log("WOOHOO");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
