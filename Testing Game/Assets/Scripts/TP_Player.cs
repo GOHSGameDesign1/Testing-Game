@@ -10,9 +10,14 @@ public class TP_Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.x <= outerLeftBound)
+        if(transform.position.x < outerLeftBound)
         {
-            transform.Translate(new Vector3(outerRightBound, transform.position.y + 2, 0), Space.World);
+            transform.Translate(new Vector3(outerRightBound - .5f, transform.position.y + 2, 0), Space.World);
+        }
+
+        if(transform.position.x > 22)
+        {
+            transform.Translate(new Vector2(-42.8f, transform.position.y + 2), Space.World);
         }
     }
 }

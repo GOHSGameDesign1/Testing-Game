@@ -574,7 +574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a30f4663ec73f44a00fd389b5e0db7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outerRightBound: 42.7
+  outerRightBound: 44
   outerLeftBound: -21.78
 --- !u!1 &1312997188
 GameObject:
