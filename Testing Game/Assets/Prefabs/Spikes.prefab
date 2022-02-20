@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3344382052487936099}
   - component: {fileID: 8313108653229105213}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Spikes
   m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
