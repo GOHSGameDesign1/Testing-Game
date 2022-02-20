@@ -382,6 +382,7 @@ GameObject:
   - component: {fileID: 988082657}
   - component: {fileID: 988082658}
   - component: {fileID: 988082659}
+  - component: {fileID: 988082660}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -396,7 +397,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 988082655}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -404,7 +405,7 @@ Transform:
   - {fileID: 800930675}
   - {fileID: 548464658}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &988082657
 Rigidbody2D:
@@ -491,6 +492,18 @@ MonoBehaviour:
   speed: 50
   rb: {fileID: 988082657}
   direction: {x: 0, y: 0}
+--- !u!114 &988082660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988082655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a110506c4b1fefe408c6cd1e14db0c0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1101902120
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,7 +693,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1502628668
 PrefabInstance:
@@ -691,7 +704,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5274138134474761064, guid: ad32e05a397a715458afcb0d2a707564, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5274138134474761064, guid: ad32e05a397a715458afcb0d2a707564, type: 3}
       propertyPath: m_LocalPosition.x
@@ -736,6 +749,10 @@ PrefabInstance:
     - target: {fileID: 8897023159004293247, guid: ad32e05a397a715458afcb0d2a707564, type: 3}
       propertyPath: m_Name
       value: Square (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8897023159004293247, guid: ad32e05a397a715458afcb0d2a707564, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad32e05a397a715458afcb0d2a707564, type: 3}
