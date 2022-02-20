@@ -6,7 +6,9 @@ public class Player : MonoBehaviour
 {
     public float speed;
     public Rigidbody2D rb;
-    public Vector2 direction;
+    public float direction;
+    public float JumpForce;
+    private bool isJumping = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,14 +18,24 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        direction = new Vector2(Input.GetAxis("Horizontal"), 0);
+        direction = (Input.GetAxisRaw("Horizontal"));
         MovePlayer();
-        Debug.Log(Input.GetAxis("Horizontal"));
+
+        if (Input.GetKeyDown(KeyCode.UpArrow) && isJumping == false)
+        {
+            isJumping = true;
+            Jump();
+            Debug.Log("Jump");
+        }
     }
 
     void MovePlayer()
     {
-         rb.MovePosition((Vector2)transform.position + direction * speed * Time.deltaTime);
-        //transform.Translate(new Vector2(Time.deltaTime, 0));
+        rb.velocity = new Vector2(direction * speed, rb.velocity.y);
+    }
+
+    void Jump()
+    {
+        rb.velocity = Vector2.up * JumpForce;
     }
 }
