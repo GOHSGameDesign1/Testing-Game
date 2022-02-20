@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Victory : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class Victory : MonoBehaviour
     {
         if (collision.gameObject.tag == "Victory")
         {
-            Debug.Log("WOOHOO");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
