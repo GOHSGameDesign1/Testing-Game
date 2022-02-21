@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dfc2d929833fbd46920f2cdcdd9476b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baddie: {fileID: 0}
+  baddie: {fileID: 455379664}
 --- !u!4 &305659040
 Transform:
   m_ObjectHideFlags: 0
@@ -198,6 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLeaving: 0
+  player: {fileID: 0}
 --- !u!212 &455379666
 SpriteRenderer:
   m_ObjectHideFlags: 0
