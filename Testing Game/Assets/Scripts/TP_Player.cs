@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class TP_Player : MonoBehaviour
 {
-    public float outerRightBound;
-    public float outerLeftBound;
+    public Vector3 ScreenBounds;
 
+    private void Start()
+    {
+        ScreenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+    }
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.x < outerLeftBound)
+        if(transform.position.x < ScreenBounds.x - 1)
         {
-            transform.Translate(new Vector3(outerRightBound - .5f, transform.position.y + 2, 0), Space.World);
-        }
-
-        if(transform.position.x > 22)
-        {
-            transform.Translate(new Vector2(-42.8f, transform.position.y + 2), Space.World);
+            Debug.Log("Too Far!");
         }
     }
 }
