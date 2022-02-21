@@ -14,8 +14,9 @@ public class BaddieStateManager : MonoBehaviour
     public GameObject player;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        player = GameObject.Find("Player");
         //Sets IntroState to start on program start
         currentState = IntroState;
 

@@ -11,4 +11,5 @@ public class BaddieInsultState : BaddieBaseState
     {
 
     }
+
 }
