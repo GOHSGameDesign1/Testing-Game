@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class BaddieStateManager : MonoBehaviour
 {
-
+    
     BaddieBaseState currentState;
-    BaddieIntroState IntroState = new BaddieIntroState();
-    BaddieInsultState InsultState = new BaddieInsultState();
-    BaddieImpatientState ImpatientState = new BaddieImpatientState();
+    public BaddieIntroState IntroState = new BaddieIntroState();
+    public BaddieInsultState InsultState = new BaddieInsultState();
+    public BaddieImpatientState ImpatientState = new BaddieImpatientState();
+
+    public bool isLeaving = false;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +26,12 @@ public class BaddieStateManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        currentState.UpdateState(this);
+    }
+
+    public void SwitchState(BaddieBaseState state)
+    {
+        currentState = state;
+        state.EnterState(this);
     }
 }

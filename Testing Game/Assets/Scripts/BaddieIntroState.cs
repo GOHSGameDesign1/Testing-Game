@@ -9,6 +9,9 @@ public class BaddieIntroState : BaddieBaseState
 
     public override void UpdateState(BaddieStateManager baddie)
     {
-
+        if(baddie.player.activeSelf == false)
+        {
+            baddie.SwitchState(baddie.InsultState);
+        }
     }
 }

@@ -236,6 +236,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8edbeaa3e3a98cc4391da70c63160a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isLeaving: 0
+  player: {fileID: 1610785570}
 --- !u!212 &620583941
 SpriteRenderer:
   m_ObjectHideFlags: 0

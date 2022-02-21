@@ -20,7 +20,7 @@ public class DEATH : MonoBehaviour
     {
         if (collision.gameObject.tag == "Respawn")
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 
