@@ -6,16 +6,12 @@ using UnityEngine.SceneManagement;
 public class DEATH : MonoBehaviour
 {
     public int deathCounter;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject baddie;
 
     // Update is called once per frame
     void Update()
     {
-        
+        baddie = GameObject.Find("Baddie");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -23,13 +19,14 @@ public class DEATH : MonoBehaviour
         if (collision.gameObject.tag == "Respawn")
         {
             gameObject.SetActive(false);
-            //Die();
+            Die();
         }
     }
 
     void Die()
     {
         deathCounter++;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+        baddie.GetComponent<BaddieStateManager>().playerDied = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

@@ -11,12 +11,11 @@ public class BaddieStateManager : MonoBehaviour
     public BaddieImpatientState ImpatientState = new BaddieImpatientState();
 
     public bool isLeaving = false;
-    public GameObject player;
+    public bool playerDied;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        player = GameObject.Find("Player");
         //Sets IntroState to start on program start
         currentState = IntroState;
 
@@ -27,6 +26,7 @@ public class BaddieStateManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //player = GameObject.Find("Player");
         currentState.UpdateState(this);
     }
 
