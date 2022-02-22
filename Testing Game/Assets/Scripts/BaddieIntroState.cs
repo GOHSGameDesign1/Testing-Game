@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class BaddieIntroState : BaddieBaseState
@@ -14,5 +15,13 @@ public class BaddieIntroState : BaddieBaseState
             baddie.playerDied = false;
             baddie.SwitchState(baddie.InsultState);
         }
+    }
+
+    public override IEnumerator CoroutineState(BaddieStateManager baddie)
+    {
+        yield return new WaitForSeconds(3f);
+        baddie.SwitchState(baddie.ImpatientState);
+
+        //throw new System.NotImplementedException();
     }
 }

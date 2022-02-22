@@ -6,13 +6,10 @@ using UnityEngine.SceneManagement;
 public class ManagerScene : MonoBehaviour
 {
 
-    public GameObject baddie;
-
     // Start is called before the first frame update
     void Start()
     {
-        SceneManager.LoadScene(0, LoadSceneMode.Additive);
-        baddie.SetActive(true);
+        SceneManager.LoadScene(1, LoadSceneMode.Additive);
     }
 
     // Update is called once per frame

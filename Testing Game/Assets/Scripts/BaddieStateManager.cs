@@ -21,6 +21,8 @@ public class BaddieStateManager : MonoBehaviour
 
         // this means the context (This exact monobehavior)
         currentState.EnterState(this);
+
+        StartCoroutine(currentState.CoroutineState(this));
     }
 
     // Update is called once per frame
@@ -34,5 +36,6 @@ public class BaddieStateManager : MonoBehaviour
     {
         currentState = state;
         state.EnterState(this);
+        StartCoroutine(currentState.CoroutineState(this));
     }
 }
