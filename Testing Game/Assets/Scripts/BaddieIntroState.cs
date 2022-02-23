@@ -3,9 +3,11 @@ using UnityEngine;
 
 public class BaddieIntroState : BaddieBaseState
 {
+    public string[] introLines = { "This is level 1", "This is level 2", "This is level 3" };
+
     public override void EnterState(BaddieStateManager baddie)
     {
-        Debug.Log("Hello from IntroState");
+        Debug.Log(introLines[Random.Range(0,3)]);
     }
 
     public override void UpdateState(BaddieStateManager baddie)

@@ -3,9 +3,12 @@ using UnityEngine;
 
 public class BaddieInsultState : BaddieBaseState
 {
+
+    public string[] insults = { "Terrible", "Are you ok?", "Defective" };
+
     public override void EnterState(BaddieStateManager baddie)
     {
-        Debug.Log("You Suck! - From the Insult State");
+        Debug.Log(insults[Random.Range(0,3)]);
     }
 
     public override void UpdateState(BaddieStateManager baddie)
