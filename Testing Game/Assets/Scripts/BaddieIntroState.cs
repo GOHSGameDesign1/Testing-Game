@@ -7,7 +7,10 @@ public class BaddieIntroState : BaddieBaseState
 
     public override void EnterState(BaddieStateManager baddie)
     {
-        Debug.Log(introLines[Random.Range(0,3)]);
+        if (baddie.playerDied == false)
+        {
+            Debug.Log(introLines[Random.Range(0, 3)]);
+        }
     }
 
     public override void UpdateState(BaddieStateManager baddie)
@@ -21,7 +24,7 @@ public class BaddieIntroState : BaddieBaseState
 
     public override IEnumerator CoroutineState(BaddieStateManager baddie)
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
         baddie.SwitchState(baddie.ImpatientState);
 
         //throw new System.NotImplementedException();
