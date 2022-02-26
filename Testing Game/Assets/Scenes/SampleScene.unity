@@ -285,6 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07a2898f7a2b89b459c27d7239b8e620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDiedDuringLevel: {fileID: 11400000, guid: 00f43fd938e3f1944863f7cd02fe7b4e, type: 2}
 --- !u!114 &349569493
 MonoBehaviour:
   m_ObjectHideFlags: 0

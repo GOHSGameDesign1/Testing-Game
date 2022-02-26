@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Victory : MonoBehaviour
 {
+    public GlobalBool PlayerDiedDuringLevel;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class Victory : MonoBehaviour
     {
         if (collision.gameObject.tag == "Victory")
         {
+            PlayerDiedDuringLevel.value = false;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }

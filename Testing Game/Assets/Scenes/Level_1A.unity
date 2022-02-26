@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLeaving: 0
-  playerDied: 0
+  playerDiedDuringLevel: {fileID: 11400000, guid: 00f43fd938e3f1944863f7cd02fe7b4e, type: 2}
 --- !u!212 &587406182
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -459,6 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07a2898f7a2b89b459c27d7239b8e620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDiedDuringLevel: {fileID: 11400000, guid: 00f43fd938e3f1944863f7cd02fe7b4e, type: 2}
 --- !u!114 &1141107871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,6 +474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathCounter: 0
   baddie: {fileID: 0}
+  playerDiedDuringLevel: {fileID: 11400000, guid: 00f43fd938e3f1944863f7cd02fe7b4e, type: 2}
 --- !u!114 &1141107872
 MonoBehaviour:
   m_ObjectHideFlags: 0
