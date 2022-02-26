@@ -7,17 +7,22 @@ public class BaddieIntroState : BaddieBaseState
 
     public override void EnterState(BaddieStateManager baddie)
     {
-        if (baddie.playerDied == false)
+        if (baddie.playerDiedDuringLevel.value == true)
         {
-            Debug.Log(introLines[Random.Range(0, 3)]);
+            baddie.SwitchState(baddie.InsultState);
         }
+        else
+        {
+            //Debug.Log(introLines[Random.Range(0, 3)]);
+            Debug.Log("INTRO STATE");
+        }
+
     }
 
     public override void UpdateState(BaddieStateManager baddie)
     {
-        if(baddie.playerDied == true)
+        if(baddie.playerDiedDuringLevel.value == true)
         {
-            baddie.playerDied = false;
             baddie.SwitchState(baddie.InsultState);
         }
     }
@@ -25,7 +30,7 @@ public class BaddieIntroState : BaddieBaseState
     public override IEnumerator CoroutineState(BaddieStateManager baddie)
     {
         yield return new WaitForSeconds(5f);
-        baddie.SwitchState(baddie.ImpatientState);
+        //baddie.SwitchState(baddie.ImpatientState);
 
         //throw new System.NotImplementedException();
     }

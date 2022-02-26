@@ -8,7 +8,8 @@ public class BaddieInsultState : BaddieBaseState
 
     public override void EnterState(BaddieStateManager baddie)
     {
-        Debug.Log(insults[Random.Range(0,3)]);
+        //Debug.Log(insults[Random.Range(0,3)]);
+        Debug.Log("INSULT STATE");
     }
 
     public override void UpdateState(BaddieStateManager baddie)
@@ -19,7 +20,7 @@ public class BaddieInsultState : BaddieBaseState
     public override IEnumerator CoroutineState(BaddieStateManager baddie)
     {
         yield return new WaitForSeconds(5f);
-        baddie.SwitchState(baddie.ImpatientState);
+        //baddie.SwitchState(baddie.ImpatientState);
 
         //throw new System.NotImplementedException();
     }

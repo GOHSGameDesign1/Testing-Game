@@ -11,18 +11,26 @@ public class BaddieStateManager : MonoBehaviour
     public BaddieImpatientState ImpatientState = new BaddieImpatientState();
 
     public bool isLeaving = false;
-    public bool playerDied;
+    public GlobalBool playerDiedDuringLevel;
 
     // Start is called before the first frame update
     void Start()
     {
         //Sets IntroState to start on program start
-        currentState = IntroState;
+        if (playerDiedDuringLevel.value == true)
+        {
+            currentState = InsultState;
+        }
+        else 
+        {
+            currentState = IntroState; 
+        }
 
         // this means the context (This exact monobehavior)
         currentState.EnterState(this);
 
         StartCoroutine(currentState.CoroutineState(this));
+
     }
 
     // Update is called once per frame

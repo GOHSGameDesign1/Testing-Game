@@ -10,9 +10,8 @@ public class BaddieImpatientState : BaddieBaseState
 
     public override void UpdateState(BaddieStateManager baddie)
     {
-        if (baddie.playerDied == true)
+        if (baddie.playerDiedDuringLevel.value == true)
         {
-            baddie.playerDied = false;
             baddie.SwitchState(baddie.InsultState);
         }
     }
