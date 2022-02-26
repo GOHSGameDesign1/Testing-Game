@@ -12,7 +12,7 @@ public class BaddieInsultState : BaddieBaseState
         //Debug.Log("INSULT STATE");
 
         //baddie.dialogueText.text = insults[Random.Range(0,3)];
-        baddie.CoroutineStart(insults[Random.Range(0, 3)]);
+        baddie.StartTypeSentence(insults[Random.Range(0, 3)]);
     }
 
     public override void UpdateState(BaddieStateManager baddie)

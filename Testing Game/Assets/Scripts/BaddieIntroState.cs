@@ -18,7 +18,7 @@ public class BaddieIntroState : BaddieBaseState
 
             //baddie.dialogueText.text = introLines[0];
 
-            baddie.CoroutineStart(introLines[Random.Range(0,3)]);
+            baddie.StartTypeSentence(introLines[Random.Range(0,3)]);
         }
 
     }
