@@ -10,6 +10,7 @@ public class BaddieStateManager : MonoBehaviour
     public BaddieIntroState IntroState = new BaddieIntroState();
     public BaddieInsultState InsultState = new BaddieInsultState();
     public BaddieImpatientState ImpatientState = new BaddieImpatientState();
+    public BaddieMadState MadState = new BaddieMadState();
 
     public bool isLeaving = false;
     public GlobalBool playerDiedDuringLevel;
@@ -50,8 +51,14 @@ public class BaddieStateManager : MonoBehaviour
         StartCoroutine(currentState.CoroutineState(this));
     }
 
-    public void CoroutineStart(string coroutineName)
+    public void StartTypeSentence(string coroutineName)
     {
         StartCoroutine(currentState.TypeSentence(this, coroutineName));
+    }
+
+    public void SwitchToMadState()
+    {
+        currentState = MadState;
+        MadState.EnterState(this);
     }
 }
