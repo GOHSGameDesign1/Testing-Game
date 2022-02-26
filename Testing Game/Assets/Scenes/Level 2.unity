@@ -480,6 +480,88 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2594345795210077260, guid: 6e42bdaa24c268f41af60fe30f84ee1c, type: 3}
   m_PrefabInstance: {fileID: 1145374883}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &43291492
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2077608733}
+    m_Modifications:
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -37
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996585, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: baddie
+      value: 
+      objectReference: {fileID: 1323439830}
+    - target: {fileID: 3724558017295996585, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: triggerDialogue
+      value: This isn't fair
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996591, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_Name
+      value: Game Break Trigger (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996591, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_TagString
+      value: Level2 Trigger 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+--- !u!4 &43291493 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+  m_PrefabInstance: {fileID: 43291492}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &45272564
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2124,6 +2206,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996585, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: baddie
+      value: 
+      objectReference: {fileID: 1323439830}
+    - target: {fileID: 3724558017295996585, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: triggerDialogue
+      value: What...
+      objectReference: {fileID: 0}
     - target: {fileID: 3724558017295996591, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
       propertyPath: m_Name
       value: Game Break Trigger
@@ -2933,6 +3023,76 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82d6d4ed21f39d24d928e69ee784a906, type: 3}
+--- !u!1001 &971052101
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2077608733}
+    m_Modifications:
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996585, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: baddie
+      value: 
+      objectReference: {fileID: 1323439830}
+    - target: {fileID: 3724558017295996585, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: triggerDialogue
+      value: Turn around
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996591, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_Name
+      value: Game Break Trigger (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+--- !u!4 &971052102 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+  m_PrefabInstance: {fileID: 971052101}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1008720453 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2594345795210077260, guid: 6e42bdaa24c268f41af60fe30f84ee1c, type: 3}
@@ -3676,6 +3836,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2594345795210077260, guid: 6e42bdaa24c268f41af60fe30f84ee1c, type: 3}
   m_PrefabInstance: {fileID: 1033689952}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1323439830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3954352005837467853, guid: c6f48ec13f8b5e34cad6d5eb9679d4bc, type: 3}
+  m_PrefabInstance: {fileID: 2082851511}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1323439833 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3954352005837467854, guid: c6f48ec13f8b5e34cad6d5eb9679d4bc, type: 3}
@@ -4180,6 +4345,76 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2594345795210077260, guid: 6e42bdaa24c268f41af60fe30f84ee1c, type: 3}
   m_PrefabInstance: {fileID: 1199993477}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1440986595
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2077608733}
+    m_Modifications:
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996585, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: baddie
+      value: 
+      objectReference: {fileID: 1323439830}
+    - target: {fileID: 3724558017295996585, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: triggerDialogue
+      value: Stop. Please stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996591, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_Name
+      value: Game Break Trigger (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+--- !u!4 &1440986596 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+  m_PrefabInstance: {fileID: 1440986595}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1452401692
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4310,9 +4545,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996585, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: baddie
+      value: 
+      objectReference: {fileID: 1323439830}
+    - target: {fileID: 3724558017295996585, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: triggerDialogue
+      value: Where are you going?
+      objectReference: {fileID: 0}
     - target: {fileID: 3724558017295996591, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
       propertyPath: m_Name
       value: Game Break Trigger (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996591, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_TagString
+      value: Level2 Trigger 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
@@ -6198,6 +6445,9 @@ Transform:
   m_Children:
   - {fileID: 1576374972}
   - {fileID: 1454047163}
+  - {fileID: 971052102}
+  - {fileID: 1440986596}
+  - {fileID: 43291493}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

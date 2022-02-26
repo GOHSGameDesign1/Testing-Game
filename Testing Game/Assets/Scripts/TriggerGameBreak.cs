@@ -5,6 +5,7 @@ using UnityEngine;
 public class TriggerGameBreak : MonoBehaviour
 {
     public GameObject baddie;
+    public string triggerDialogue;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +22,6 @@ public class TriggerGameBreak : MonoBehaviour
     {
         baddie.GetComponent<BaddieStateManager>().StopAllCoroutines();
         baddie.GetComponent<BaddieStateManager>().SwitchToMadState();
+        
     }
 }
