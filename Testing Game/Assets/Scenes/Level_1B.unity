@@ -480,6 +480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07a2898f7a2b89b459c27d7239b8e620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDiedDuringLevel: {fileID: 11400000, guid: 00f43fd938e3f1944863f7cd02fe7b4e, type: 2}
 --- !u!114 &1019639800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -492,6 +493,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a110506c4b1fefe408c6cd1e14db0c0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathCounter: 0
+  baddie: {fileID: 0}
+  playerDiedDuringLevel: {fileID: 0}
 --- !u!114 &1019639801
 MonoBehaviour:
   m_ObjectHideFlags: 0

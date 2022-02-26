@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BaddieStateManager : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class BaddieStateManager : MonoBehaviour
 
     public bool isLeaving = false;
     public GlobalBool playerDiedDuringLevel;
+
+    public Text dialogueText;
 
     // Start is called before the first frame update
     void Start()
@@ -45,5 +48,10 @@ public class BaddieStateManager : MonoBehaviour
         currentState = state;
         state.EnterState(this);
         StartCoroutine(currentState.CoroutineState(this));
+    }
+
+    public void CoroutineStart(string coroutineName)
+    {
+        StartCoroutine(currentState.TypeSentence(this, coroutineName));
     }
 }

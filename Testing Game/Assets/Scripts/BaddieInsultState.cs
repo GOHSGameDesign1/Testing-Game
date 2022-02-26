@@ -9,7 +9,10 @@ public class BaddieInsultState : BaddieBaseState
     public override void EnterState(BaddieStateManager baddie)
     {
         //Debug.Log(insults[Random.Range(0,3)]);
-        Debug.Log("INSULT STATE");
+        //Debug.Log("INSULT STATE");
+
+        //baddie.dialogueText.text = insults[Random.Range(0,3)];
+        baddie.CoroutineStart(insults[Random.Range(0, 3)]);
     }
 
     public override void UpdateState(BaddieStateManager baddie)
@@ -23,6 +26,16 @@ public class BaddieInsultState : BaddieBaseState
         baddie.SwitchState(baddie.ImpatientState);
 
         //throw new System.NotImplementedException();
+    }
+
+    public override IEnumerator TypeSentence(BaddieStateManager baddie, string sentence)
+    {
+         baddie.dialogueText.text = "";
+         foreach (char letter in sentence.ToCharArray())
+         {
+             baddie.dialogueText.text += letter;
+             yield return new WaitForSeconds(0.03f);
+         }
     }
 
 }

@@ -13,9 +13,9 @@ public class DEATH : MonoBehaviour
     void Update()
     {
         baddie = GameObject.Find("Baddie");
-        Debug.Log(SceneManager.GetActiveScene().buildIndex);
+        //Debug.Log(SceneManager.GetActiveScene().buildIndex);
 
-        Debug.Log(playerDiedDuringLevel.value);
+        //Debug.Log(playerDiedDuringLevel.value);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
