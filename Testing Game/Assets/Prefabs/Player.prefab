@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6363138908163270964}
   - component: {fileID: 6363138908163270963}
   - component: {fileID: 6363138908163270962}
+  - component: {fileID: 1767498610}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6363138908163270961}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -86,7 +87,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathCounter: 0
-  baddie: {fileID: 0}
   playerDiedDuringLevel: {fileID: 11400000, guid: 00f43fd938e3f1944863f7cd02fe7b4e, type: 2}
 --- !u!114 &6363138908163270964
 MonoBehaviour:
@@ -229,3 +229,16 @@ PolygonCollider2D:
       - {x: -0.107399635, y: -0.38152093}
       - {x: 0.09587128, y: -0.38672167}
       - {x: 0.094406925, y: -0.75811297}
+--- !u!114 &1767498610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6363138908163270961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95a30f4663ec73f44a00fd389b5e0db7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScreenBounds: {x: 0, y: 0, z: 0}
