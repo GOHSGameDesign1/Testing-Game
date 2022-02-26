@@ -3,24 +3,20 @@ using UnityEngine;
 
 public class BaddieImpatientState : BaddieBaseState
 {
+    public string[] impatientLines = { "Please hurry up.", "You're wasting my time.", "Can you go any slower?", "Subject appears to be... more sluggish than usual" };
     public override void EnterState(BaddieStateManager baddie)
     {
-        //Debug.Log("Hurry Up!");
-        //baddie.dialogueText.text = "Hurry Up!";
-        baddie.CoroutineStart("Hurry Up!");
+        baddie.CoroutineStart(impatientLines[Random.Range(0,4)]);
     }
 
     public override void UpdateState(BaddieStateManager baddie)
     {
-        /*if (baddie.playerDiedDuringLevel.value == true)
-        {
-            baddie.SwitchState(baddie.InsultState);
-        }*/
+
     }
 
     public override IEnumerator CoroutineState(BaddieStateManager baddie)
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(7f);
         baddie.SwitchState(baddie.ImpatientState);
 
         //throw new System.NotImplementedException();
