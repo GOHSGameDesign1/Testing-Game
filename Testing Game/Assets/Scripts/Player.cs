@@ -25,7 +25,6 @@ public class Player : MonoBehaviour
         {
             isJumping = true;
             Jump();
-            Debug.Log("Jump");
         }
     }
 
