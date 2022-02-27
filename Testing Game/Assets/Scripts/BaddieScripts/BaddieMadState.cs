@@ -1,25 +1,24 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class BaddieImpatientState : BaddieBaseState
+public class BaddieMadState : BaddieBaseState
 {
-    public string[] impatientLines = { "Please hurry up.", "You're wasting my time.", "Can you go any slower?", "Subject appears to be... more sluggish than usual" };
     public override void EnterState(BaddieStateManager baddie)
     {
-        baddie.StartTypeSentence(impatientLines[Random.Range(0,4)]);
+        baddie.StartTypeSentence(baddie.madString);
+        baddie.SwitchFace(baddie.madFace);
     }
 
     public override void UpdateState(BaddieStateManager baddie)
     {
-
+        
     }
 
     public override IEnumerator CoroutineState(BaddieStateManager baddie)
     {
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(10f);
         baddie.SwitchState(baddie.ImpatientState);
-
-        //throw new System.NotImplementedException();
     }
 
     public override IEnumerator TypeSentence(BaddieStateManager baddie, string sentence)

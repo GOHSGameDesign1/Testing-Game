@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class TriggerGameBreak : MonoBehaviour
 {
-    public GameObject baddie;
     public string triggerDialogue;
+    public Sprite triggerFace;
+    private BaddieStateManager baddieStateManager;
     // Start is called before the first frame update
     void Start()
     {
-        baddie = GameObject.Find("Baddie");
+        baddieStateManager = GameObject.Find("Baddie").GetComponent<BaddieStateManager>();
     }
 
     // Update is called once per frame
@@ -20,8 +21,8 @@ public class TriggerGameBreak : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        baddie.GetComponent<BaddieStateManager>().StopAllCoroutines();
-        baddie.GetComponent<BaddieStateManager>().SwitchToMadState(triggerDialogue);
+        baddieStateManager.StopAllCoroutines();
+        baddieStateManager.SwitchToMadState(triggerDialogue, triggerFace);
         gameObject.SetActive(false);
     }
 }

@@ -29,6 +29,7 @@ public class BaddieIntroState : BaddieBaseState
             {
                 case 2:
                     baddie.StartTypeSentence(introLines[0]);
+                    baddie.SwitchFace(baddie.NeutralFace);
                     break;
                 case 3:
                     baddie.StartTypeSentence(introLines[1]);

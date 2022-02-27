@@ -736,8 +736,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3724558017295996585, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: triggerFace
+      value: 
+      objectReference: {fileID: 21300000, guid: e9de9a5efb09bc348979bdacc12c58bf, type: 3}
+    - target: {fileID: 3724558017295996585, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
       propertyPath: triggerDialogue
       value: WHAT
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996586, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_Size.x
+      value: 6.943712
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996586, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: m_Offset.x
+      value: 2.971856
       objectReference: {fileID: 0}
     - target: {fileID: 3724558017295996591, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
       propertyPath: m_Name

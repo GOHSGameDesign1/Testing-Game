@@ -18,10 +18,21 @@ public class BaddieStateManager : MonoBehaviour
     public Text dialogueText;
 
     public string madString;
+    public Sprite madFace;
+
+    public SpriteRenderer spriteRenderer;
+
+    public Sprite NeutralFace;
+    public Sprite LaughingFace;
+    public Sprite AngryFace;
+    public Sprite SurprisedFace;
+    public Sprite AnnoyedFace;
 
     // Start is called before the first frame update
     void Start()
     {
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
         //Sets IntroState to start on program start
         if (playerDiedDuringLevel.value == true)
         {
@@ -58,11 +69,17 @@ public class BaddieStateManager : MonoBehaviour
         StartCoroutine(currentState.TypeSentence(this, coroutineName));
     }
 
-    public void SwitchToMadState(string dialogue)
+    public void SwitchToMadState(string dialogue, Sprite image)
     {
         madString = dialogue;
+        madFace = image;
         currentState = MadState;
         MadState.EnterState(this);
         StartCoroutine(MadState.CoroutineState(this));
+    }
+
+    public void SwitchFace(Sprite image)
+    {
+        spriteRenderer.sprite = image;
     }
 }
