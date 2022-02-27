@@ -18,6 +18,6 @@ public class PlayerClipping : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        transform.Translate(1, 0, 0);
+        transform.Translate(0, 1, 0);
     }
 }
