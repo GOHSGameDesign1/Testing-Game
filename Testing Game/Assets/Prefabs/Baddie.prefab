@@ -98,10 +98,12 @@ MonoBehaviour:
   isLeaving: 0
   playerDiedDuringLevel: {fileID: 11400000, guid: 00f43fd938e3f1944863f7cd02fe7b4e, type: 2}
   dialogueText: {fileID: 0}
-  madString: 
+  madString: OW, fine you win. I was never a REAL challenge anyways..
+  madFace: {fileID: 0}
   spriteRenderer: {fileID: 0}
   NeutralFace: {fileID: 21300000, guid: e04b46ff2502b0740a743dc20df29bc4, type: 3}
   LaughingFace: {fileID: 21300000, guid: 2834665e726b2764f80da4fe09328db2, type: 3}
   AngryFace: {fileID: 21300000, guid: 6a57de437ebf3a847b659b1150722607, type: 3}
   SurprisedFace: {fileID: 21300000, guid: e9de9a5efb09bc348979bdacc12c58bf, type: 3}
   AnnoyedFace: {fileID: 21300000, guid: 84eeced5ea9ef7c49a7c474de088ad11, type: 3}
+  DefeatFace: {fileID: 21300000, guid: 70a47672d7e532c45b6b72180c926a35, type: 3}

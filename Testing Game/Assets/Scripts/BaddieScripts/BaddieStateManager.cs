@@ -27,6 +27,7 @@ public class BaddieStateManager : MonoBehaviour
     public Sprite AngryFace;
     public Sprite SurprisedFace;
     public Sprite AnnoyedFace;
+    public Sprite DefeatFace;
 
     // Start is called before the first frame update
     void Start()
@@ -81,5 +82,13 @@ public class BaddieStateManager : MonoBehaviour
     public void SwitchFace(Sprite image)
     {
         spriteRenderer.sprite = image;
+    }
+
+    public void Defeat()
+    {
+        madString = "OW, fine you win. I was never a REAL challenge anyways..";
+        madFace = DefeatFace;
+        currentState = MadState;
+        MadState.EnterState(this);
     }
 }
