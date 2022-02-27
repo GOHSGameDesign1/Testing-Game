@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public float direction;
     public float JumpForce;
     private bool isJumping = false;
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,8 @@ public class Player : MonoBehaviour
     {
         direction = (Input.GetAxisRaw("Horizontal"));
         MovePlayer();
+
+        animator.SetFloat("Velocity", direction);
 
         if (Input.GetKeyDown(KeyCode.UpArrow) && isJumping == false)
         {

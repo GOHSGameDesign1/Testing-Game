@@ -13,7 +13,6 @@ public class TP_Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(ScreenBounds.x);
 
         if(transform.position.x < -1 * ScreenBounds.x - 0.5)
         {

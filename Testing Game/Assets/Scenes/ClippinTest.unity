@@ -226,7 +226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2594345795210077260, guid: 6e42bdaa24c268f41af60fe30f84ee1c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2594345795210077260, guid: 6e42bdaa24c268f41af60fe30f84ee1c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -389,35 +389,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9747797, y: 1}
   m_EdgeRadius: 0
---- !u!1 &955184015 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6363138908163270961, guid: d5c9e3827bafdc244b97deaa88f0633a, type: 3}
-  m_PrefabInstance: {fileID: 1332846100}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &955184024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 955184015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 448acbdaf16056f44a664f4b8d385a2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &955184025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 955184015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 588a9da848040f341acafbe803355e1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1063259019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -567,33 +538,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6363138908163270967, guid: d5c9e3827bafdc244b97deaa88f0633a, type: 3}
-      propertyPath: m_Mass
-      value: 0.0001
-      objectReference: {fileID: 0}
-    - target: {fileID: 6363138908163270967, guid: d5c9e3827bafdc244b97deaa88f0633a, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6363138908163270967, guid: d5c9e3827bafdc244b97deaa88f0633a, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6363138908163270967, guid: d5c9e3827bafdc244b97deaa88f0633a, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6363138908163270968, guid: d5c9e3827bafdc244b97deaa88f0633a, type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6363138908163270968, guid: d5c9e3827bafdc244b97deaa88f0633a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.89
+      value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 6363138908163270968, guid: d5c9e3827bafdc244b97deaa88f0633a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: -0.71
       objectReference: {fileID: 0}
     - target: {fileID: 6363138908163270968, guid: d5c9e3827bafdc244b97deaa88f0633a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -665,7 +620,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
