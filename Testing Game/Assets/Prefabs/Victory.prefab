@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6389371340429900190}
   - component: {fileID: 6389371340429900161}
   - component: {fileID: 6389371340429900191}
+  - component: {fileID: 7258206518087316913}
   m_Layer: 0
   m_Name: Victory
   m_TagString: Victory
@@ -109,3 +110,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7258206518087316913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6389371340429900160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a2898f7a2b89b459c27d7239b8e620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerDiedDuringLevel: {fileID: 11400000, guid: 00f43fd938e3f1944863f7cd02fe7b4e, type: 2}

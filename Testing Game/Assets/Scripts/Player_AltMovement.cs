@@ -7,6 +7,7 @@ public class Player_AltMovement : MonoBehaviour
     public float speed;
     public Rigidbody2D rb;
     public Vector2 direction;
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,8 @@ public class Player_AltMovement : MonoBehaviour
     {
         direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         MovePlayer();
+
+        animator.SetFloat("Velocity", direction.x);
     }
 
     void MovePlayer()

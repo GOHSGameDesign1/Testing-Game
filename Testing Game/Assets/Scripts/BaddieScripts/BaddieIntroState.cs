@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class BaddieIntroState : BaddieBaseState
 {
-    public string[] introLines = { "Get to the square", "Now do some jumping", "Can you make this final jump?" };
+    public string[] introLines = { "Get to the square", "Now do some jumping", "Can you make this final jump?", "Have fun walking aimlessly around in the maze.", "That's it! Prepare to get crushed!!! AAHAHAAHAHAHAHAHAH!!!!!" };
 
     private int currentBuildIndex;
 
@@ -29,12 +29,20 @@ public class BaddieIntroState : BaddieBaseState
             {
                 case 2:
                     baddie.StartTypeSentence(introLines[0]);
+                    baddie.SwitchFace(baddie.NeutralFace);
                     break;
                 case 3:
                     baddie.StartTypeSentence(introLines[1]);
                     break;
                 case 4:
                     baddie.StartTypeSentence(introLines[2]);
+                    break;
+                case 5:
+                    baddie.StartTypeSentence(introLines[3]);
+                    break;
+                case 6:
+                    baddie.StartTypeSentence(introLines[4]);
+                    baddie.SwitchFace(baddie.AngryFace);
                     break;
             }
         }
@@ -63,7 +71,7 @@ public class BaddieIntroState : BaddieBaseState
         foreach (char letter in sentence.ToCharArray())
         {
             baddie.dialogueText.text += letter;
-            yield return new WaitForSeconds(0.003f);
+            yield return new WaitForSeconds(0.03f);
         }
     }
 }

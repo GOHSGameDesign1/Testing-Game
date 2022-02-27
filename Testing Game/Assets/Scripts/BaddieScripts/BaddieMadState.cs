@@ -7,6 +7,7 @@ public class BaddieMadState : BaddieBaseState
     public override void EnterState(BaddieStateManager baddie)
     {
         baddie.StartTypeSentence(baddie.madString);
+        baddie.SwitchFace(baddie.madFace);
     }
 
     public override void UpdateState(BaddieStateManager baddie)
