@@ -17,7 +17,7 @@ public class PlatformMove : MonoBehaviour
     {
         //rb.MovePosition(new Vector2(transform.position.x + 0.1f * value, transform.position.y));
         //rb.AddForce(Vector2.right * 24440 * value);
-        rb.velocity = Vector2.right * 2 * value;
+        rb.velocity = Vector2.right * 1 * value;
         //rb.position = rb.position - new Vector2(-0.3f, 0) * value;
     }
 }
