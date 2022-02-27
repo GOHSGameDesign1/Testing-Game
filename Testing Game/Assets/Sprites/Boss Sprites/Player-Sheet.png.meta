@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 6bff6a9ea7e50384881d57e100389618
+guid: 84f734f3469978d48a8f6af857be086e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8656723151294292747
-    second: Run frame one3_0
+      213: 4518225611054890064
+    second: Player-Sheet_0
   - first:
-      213: 8557674996955444797
-    second: Run frame one3_1
+      213: 1871674578834246284
+    second: Player-Sheet_1
+  - first:
+      213: -8148742256322455360
+    second: Player-Sheet_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,43 +112,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Run frame one3_0
+      name: Player-Sheet_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 209
-        width: 20
-        height: 22
+        x: 43
+        y: 0
+        width: 164
+        height: 250
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fc1430c8242dd780800000000000000
-      internalID: -8656723151294292747
+      spriteID: 05cbff13146f3be30800000000000000
+      internalID: 4518225611054890064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run frame one3_1
+      name: Player-Sheet_1
       rect:
         serializedVersion: 2
-        x: 115
-        y: 91
-        width: 12
-        height: 20
+        x: 292
+        y: 0
+        width: 188
+        height: 250
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3675c8b118f2c670800000000000000
-      internalID: 8557674996955444797
+      spriteID: c8a4b86ec1689f910800000000000000
+      internalID: 1871674578834246284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 0
+        width: 238
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c85fad771ad9ee80800000000000000
+      internalID: -8148742256322455360
       vertices: []
       indices: 
       edges: []
