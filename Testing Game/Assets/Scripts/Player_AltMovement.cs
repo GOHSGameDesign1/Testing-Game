@@ -21,6 +21,7 @@ public class Player_AltMovement : MonoBehaviour
         MovePlayer();
 
         animator.SetFloat("Velocity", direction.x);
+        animator.SetFloat("VerticalVelocity", direction.y);
     }
 
     void MovePlayer()
