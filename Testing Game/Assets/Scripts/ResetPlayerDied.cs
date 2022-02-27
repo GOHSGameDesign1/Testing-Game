@@ -7,7 +7,7 @@ public class ResetPlayerDied : MonoBehaviour
 
     public GlobalBool PlayerDiedDuringLevel;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         PlayerDiedDuringLevel.value = false;
     }

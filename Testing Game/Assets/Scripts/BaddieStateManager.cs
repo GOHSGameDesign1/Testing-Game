@@ -10,11 +10,14 @@ public class BaddieStateManager : MonoBehaviour
     public BaddieIntroState IntroState = new BaddieIntroState();
     public BaddieInsultState InsultState = new BaddieInsultState();
     public BaddieImpatientState ImpatientState = new BaddieImpatientState();
+    public BaddieMadState MadState = new BaddieMadState();
 
     public bool isLeaving = false;
     public GlobalBool playerDiedDuringLevel;
 
     public Text dialogueText;
+
+    public string madString;
 
     // Start is called before the first frame update
     void Start()
@@ -50,8 +53,16 @@ public class BaddieStateManager : MonoBehaviour
         StartCoroutine(currentState.CoroutineState(this));
     }
 
-    public void CoroutineStart(string coroutineName)
+    public void StartTypeSentence(string coroutineName)
     {
         StartCoroutine(currentState.TypeSentence(this, coroutineName));
+    }
+
+    public void SwitchToMadState(string dialogue)
+    {
+        madString = dialogue;
+        currentState = MadState;
+        MadState.EnterState(this);
+        StartCoroutine(MadState.CoroutineState(this));
     }
 }
