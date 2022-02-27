@@ -6,7 +6,7 @@ public class BaddieMadState : BaddieBaseState
 {
     public override void EnterState(BaddieStateManager baddie)
     {
-        baddie.StartTypeSentence("What...");
+        baddie.StartTypeSentence(baddie.madString);
     }
 
     public override void UpdateState(BaddieStateManager baddie)
@@ -16,7 +16,8 @@ public class BaddieMadState : BaddieBaseState
 
     public override IEnumerator CoroutineState(BaddieStateManager baddie)
     {
-        return null;
+        yield return new WaitForSeconds(10f);
+        baddie.SwitchState(baddie.ImpatientState);
     }
 
     public override IEnumerator TypeSentence(BaddieStateManager baddie, string sentence)

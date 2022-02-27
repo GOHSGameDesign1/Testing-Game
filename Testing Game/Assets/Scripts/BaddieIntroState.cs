@@ -1,12 +1,17 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BaddieIntroState : BaddieBaseState
 {
-    public string[] introLines = { "This is level 1", "This is level 2", "This is level 3" };
+    public string[] introLines = { "Get to the square", "Now do some jumping", "Can you make this final jump?" };
+
+    private int currentBuildIndex;
 
     public override void EnterState(BaddieStateManager baddie)
     {
+        currentBuildIndex = SceneManager.GetActiveScene().buildIndex;
+
         if (baddie.playerDiedDuringLevel.value == true)
         {
             baddie.SwitchState(baddie.InsultState);
@@ -18,7 +23,20 @@ public class BaddieIntroState : BaddieBaseState
 
             //baddie.dialogueText.text = introLines[0];
 
-            baddie.StartTypeSentence(introLines[Random.Range(0,3)]);
+            //baddie.StartTypeSentence(introLines[Random.Range(0,3)]);
+
+            switch (currentBuildIndex)
+            {
+                case 2:
+                    baddie.StartTypeSentence(introLines[0]);
+                    break;
+                case 3:
+                    baddie.StartTypeSentence(introLines[1]);
+                    break;
+                case 4:
+                    baddie.StartTypeSentence(introLines[2]);
+                    break;
+            }
         }
 
     }

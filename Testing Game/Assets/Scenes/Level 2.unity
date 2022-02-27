@@ -545,7 +545,7 @@ PrefabInstance:
       objectReference: {fileID: 1323439830}
     - target: {fileID: 3724558017295996585, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
       propertyPath: triggerDialogue
-      value: This isn't fair
+      value: This isn't fair...
       objectReference: {fileID: 0}
     - target: {fileID: 3724558017295996591, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
       propertyPath: m_Name
@@ -2164,7 +2164,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2216,7 +2216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3724558017295996591, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
       propertyPath: m_Name
-      value: Game Break Trigger
+      value: Game Break Trigger (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
@@ -4495,7 +4495,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3724558017295996584, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
       propertyPath: m_LocalScale.x
@@ -4555,7 +4555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3724558017295996591, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
       propertyPath: m_Name
-      value: Game Break Trigger (1)
+      value: Game Break Trigger
       objectReference: {fileID: 0}
     - target: {fileID: 3724558017295996591, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
       propertyPath: m_TagString
@@ -6443,8 +6443,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1576374972}
   - {fileID: 1454047163}
+  - {fileID: 1576374972}
   - {fileID: 971052102}
   - {fileID: 1440986596}
   - {fileID: 43291493}

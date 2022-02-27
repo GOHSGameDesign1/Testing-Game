@@ -4,7 +4,7 @@ using UnityEngine;
 public class BaddieInsultState : BaddieBaseState
 {
 
-    public string[] insults = { "Terrible", "Are you ok?", "Defective" };
+    public string[] insults = { "Terrible", "Are you ok?", "Defective", "Maybe doubted you too little...", "HOLY ur bad" };
 
     public override void EnterState(BaddieStateManager baddie)
     {
@@ -12,7 +12,7 @@ public class BaddieInsultState : BaddieBaseState
         //Debug.Log("INSULT STATE");
 
         //baddie.dialogueText.text = insults[Random.Range(0,3)];
-        baddie.StartTypeSentence(insults[Random.Range(0, 3)]);
+        baddie.StartTypeSentence(insults[Random.Range(0, 5)]);
     }
 
     public override void UpdateState(BaddieStateManager baddie)

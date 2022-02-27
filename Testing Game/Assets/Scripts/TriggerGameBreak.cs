@@ -21,7 +21,7 @@ public class TriggerGameBreak : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         baddie.GetComponent<BaddieStateManager>().StopAllCoroutines();
-        baddie.GetComponent<BaddieStateManager>().SwitchToMadState();
-        
+        baddie.GetComponent<BaddieStateManager>().SwitchToMadState(triggerDialogue);
+        gameObject.SetActive(false);
     }
 }

@@ -735,6 +735,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3724558017295996585, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
+      propertyPath: triggerDialogue
+      value: WHAT
+      objectReference: {fileID: 0}
     - target: {fileID: 3724558017295996591, guid: ac075e122e6c734458d20d4da955e97b, type: 3}
       propertyPath: m_Name
       value: Game Break Trigger

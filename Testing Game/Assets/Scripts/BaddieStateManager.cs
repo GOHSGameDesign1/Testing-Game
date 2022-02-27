@@ -17,6 +17,8 @@ public class BaddieStateManager : MonoBehaviour
 
     public Text dialogueText;
 
+    public string madString;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,9 +58,11 @@ public class BaddieStateManager : MonoBehaviour
         StartCoroutine(currentState.TypeSentence(this, coroutineName));
     }
 
-    public void SwitchToMadState()
+    public void SwitchToMadState(string dialogue)
     {
+        madString = dialogue;
         currentState = MadState;
         MadState.EnterState(this);
+        StartCoroutine(MadState.CoroutineState(this));
     }
 }
