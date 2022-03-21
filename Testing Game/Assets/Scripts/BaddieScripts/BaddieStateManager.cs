@@ -5,29 +5,35 @@ using UnityEngine.UI;
 
 public class BaddieStateManager : MonoBehaviour
 {
-    
+    //STATE SETUP
     BaddieBaseState currentState;
     public BaddieIntroState IntroState = new BaddieIntroState();
     public BaddieInsultState InsultState = new BaddieInsultState();
     public BaddieImpatientState ImpatientState = new BaddieImpatientState();
     public BaddieMadState MadState = new BaddieMadState();
 
-    public bool isLeaving = false;
+    //DEATH CHECK
     public GlobalBool playerDiedDuringLevel;
 
+    // UI/DIALOGUE
     public Text dialogueText;
+    public Dialogue introLines;
 
-    public string madString;
-    public Sprite madFace;
+    //Changeable mad string based on trigger, each trigger has a unique string. This gets set to that string whenever the trigger gets activated.
+    [HideInInspector] public string madString;
 
+    //SPRITES
     public SpriteRenderer spriteRenderer;
-
     public Sprite NeutralFace;
     public Sprite LaughingFace;
     public Sprite AngryFace;
     public Sprite SurprisedFace;
     public Sprite AnnoyedFace;
     public Sprite DefeatFace;
+    [HideInInspector] public Sprite madFace;
+
+    //AUDIO
+    public AudioSource talkingAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -65,9 +71,9 @@ public class BaddieStateManager : MonoBehaviour
         StartCoroutine(currentState.CoroutineState(this));
     }
 
-    public void StartTypeSentence(string coroutineName)
+    public void StartTypeSentence(string sentence)
     {
-        StartCoroutine(currentState.TypeSentence(this, coroutineName));
+        StartCoroutine(currentState.TypeSentence(this, sentence));
     }
 
     public void SwitchToMadState(string dialogue, Sprite image)

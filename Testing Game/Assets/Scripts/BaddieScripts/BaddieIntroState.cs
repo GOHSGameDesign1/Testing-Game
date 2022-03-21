@@ -76,6 +76,7 @@ public class BaddieIntroState : BaddieBaseState
         foreach (char letter in sentence.ToCharArray())
         {
             baddie.dialogueText.text += letter;
+            baddie.talkingAudio.Play();
             yield return new WaitForSeconds(0.03f);
         }
     }

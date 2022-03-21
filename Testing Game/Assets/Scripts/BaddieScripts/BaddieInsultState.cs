@@ -35,7 +35,8 @@ public class BaddieInsultState : BaddieBaseState
          foreach (char letter in sentence.ToCharArray())
          {
              baddie.dialogueText.text += letter;
-             yield return new WaitForSeconds(0.03f);
+            baddie.talkingAudio.Play();
+            yield return new WaitForSeconds(0.03f);
          }
     }
 
