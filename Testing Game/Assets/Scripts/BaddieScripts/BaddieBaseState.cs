@@ -11,6 +11,5 @@ public abstract class BaddieBaseState
 
     public abstract IEnumerator CoroutineState(BaddieStateManager baddie);
 
-    public abstract IEnumerator TypeSentence(BaddieStateManager baddie, string sentence);
 
 }

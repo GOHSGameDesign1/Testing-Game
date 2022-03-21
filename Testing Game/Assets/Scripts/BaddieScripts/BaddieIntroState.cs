@@ -70,14 +70,4 @@ public class BaddieIntroState : BaddieBaseState
         //throw new System.NotImplementedException();
     }
 
-    public override IEnumerator TypeSentence(BaddieStateManager baddie, string sentence)
-    {
-        baddie.dialogueText.text = "";
-        foreach (char letter in sentence.ToCharArray())
-        {
-            baddie.dialogueText.text += letter;
-            baddie.talkingAudio.Play();
-            yield return new WaitForSeconds(0.03f);
-        }
-    }
 }

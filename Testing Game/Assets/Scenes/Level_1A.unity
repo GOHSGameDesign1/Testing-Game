@@ -461,6 +461,10 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 215784445}
+    - target: {fileID: 3954352005837467852, guid: c6f48ec13f8b5e34cad6d5eb9679d4bc, type: 3}
+      propertyPath: introLines.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3954352005837467853, guid: c6f48ec13f8b5e34cad6d5eb9679d4bc, type: 3}
       propertyPath: m_Name
       value: Baddie

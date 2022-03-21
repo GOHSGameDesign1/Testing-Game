@@ -73,7 +73,18 @@ public class BaddieStateManager : MonoBehaviour
 
     public void StartTypeSentence(string sentence)
     {
-        StartCoroutine(currentState.TypeSentence(this, sentence));
+        StartCoroutine(TypeSentence(sentence));
+    }
+
+    IEnumerator TypeSentence(string sentence)
+    {
+        dialogueText.text = "";
+        foreach (char letter in sentence.ToCharArray())
+        {
+            dialogueText.text += letter;
+            talkingAudio.Play();
+            yield return new WaitForSeconds(0.03f);
+        }
     }
 
     public void SwitchToMadState(string dialogue, Sprite image)
@@ -92,7 +103,7 @@ public class BaddieStateManager : MonoBehaviour
 
     public void Defeat()
     {
-        madString = "OW, fine you win. I was never a REAL challenge anyways..";
+        madString = "OK, fine you win. I was never a REAL challenge anyways..";
         madFace = DefeatFace;
         currentState = MadState;
         MadState.EnterState(this);
