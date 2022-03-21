@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class BaddieIntroState : BaddieBaseState
 {
-    public string[] introLines = { "Welcome, to pass my tests, get to the square", "Now do some jumping", "Can you make this final jump?", "Have fun walking aimlessly around in the maze.", "That's it! Prepare to get crushed!!! AAHAHAAHAHAHAHAHAH!!!!!", "Ok fine.. you win. I never was a REAL challenge anyways. Just get out of here ok..." };
 
     private int currentBuildIndex;
 
@@ -32,20 +31,20 @@ public class BaddieIntroState : BaddieBaseState
                     baddie.SwitchFace(baddie.NeutralFace);
                     break;
                 case 3:
-                    baddie.StartTypeSentence(introLines[1]);
+                    baddie.StartTypeSentence(baddie.introLines.sentences[1]);
                     break;
                 case 4:
-                    baddie.StartTypeSentence(introLines[2]);
+                    baddie.StartTypeSentence(baddie.introLines.sentences[2]);
                     break;
                 case 5:
-                    baddie.StartTypeSentence(introLines[3]);
+                    baddie.StartTypeSentence(baddie.introLines.sentences[3]);
                     break;
                 case 6:
-                    baddie.StartTypeSentence(introLines[4]);
+                    baddie.StartTypeSentence(baddie.introLines.sentences[4]);
                     baddie.SwitchFace(baddie.AngryFace);
                     break;
                 case 7:
-                    baddie.StartTypeSentence(introLines[5]);
+                    baddie.StartTypeSentence(baddie.introLines.sentences[5]);
                     baddie.SwitchFace(baddie.DefeatFace);
                     break;
 
