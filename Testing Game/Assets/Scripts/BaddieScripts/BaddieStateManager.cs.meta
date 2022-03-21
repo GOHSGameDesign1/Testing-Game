@@ -3,7 +3,18 @@ guid: 8edbeaa3e3a98cc4391da70c63160a63
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - playerDiedDuringLevel: {instanceID: 0}
+  - dialogueText: {instanceID: 0}
+  - spriteRenderer: {instanceID: 0}
+  - NeutralFace: {instanceID: 0}
+  - LaughingFace: {instanceID: 0}
+  - AngryFace: {instanceID: 0}
+  - SurprisedFace: {instanceID: 0}
+  - AnnoyedFace: {instanceID: 0}
+  - DefeatFace: {instanceID: 0}
+  - madFace: {instanceID: 0}
+  - talkingAudio: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
