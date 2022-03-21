@@ -28,7 +28,7 @@ public class BaddieIntroState : BaddieBaseState
             switch (currentBuildIndex)
             {
                 case 2:
-                    baddie.StartTypeSentence(introLines[0]);
+                    baddie.StartTypeSentence(baddie.introLines.sentences[0]);
                     baddie.SwitchFace(baddie.NeutralFace);
                     break;
                 case 3:

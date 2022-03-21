@@ -96,11 +96,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8edbeaa3e3a98cc4391da70c63160a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLeaving: 0
   playerDiedDuringLevel: {fileID: 11400000, guid: 00f43fd938e3f1944863f7cd02fe7b4e, type: 2}
   dialogueText: {fileID: 0}
+  introLines:
+    sentences:
+    - Welcome to my testing simulation. To pass my tests, get to the square
+    - Now do some jumping
+    - Can you make this final jump?
+    - Have fun walking aimlessly around in the maze.
+    - That's it! Prepare to get crushed!!! AAHAHAAHAHAHAHAHAH!!!!!
+    - Ok fine.. you win. I never was a REAL challenge anyways. Just get out of here
+      ok...
   madString: OW, fine you win. I was never a REAL challenge anyways..
-  madFace: {fileID: 0}
   spriteRenderer: {fileID: 0}
   NeutralFace: {fileID: 21300000, guid: e04b46ff2502b0740a743dc20df29bc4, type: 3}
   LaughingFace: {fileID: 21300000, guid: 2834665e726b2764f80da4fe09328db2, type: 3}
@@ -108,6 +115,7 @@ MonoBehaviour:
   SurprisedFace: {fileID: 21300000, guid: e9de9a5efb09bc348979bdacc12c58bf, type: 3}
   AnnoyedFace: {fileID: 21300000, guid: 84eeced5ea9ef7c49a7c474de088ad11, type: 3}
   DefeatFace: {fileID: 21300000, guid: 70a47672d7e532c45b6b72180c926a35, type: 3}
+  madFace: {fileID: 0}
   talkingAudio: {fileID: 3536294353672278224}
 --- !u!82 &3536294353672278224
 AudioSource:

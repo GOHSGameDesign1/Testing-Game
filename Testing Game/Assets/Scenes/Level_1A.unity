@@ -218,6 +218,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6612444904194335533, guid: 10085d0e3f8bd2e4fa0903d6aa8a4f4f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 432.9897
+      objectReference: {fileID: 0}
+    - target: {fileID: 6612444904194335533, guid: 10085d0e3f8bd2e4fa0903d6aa8a4f4f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -119.358765
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10085d0e3f8bd2e4fa0903d6aa8a4f4f, type: 3}
 --- !u!114 &215784445 stripped
@@ -461,10 +469,6 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 215784445}
-    - target: {fileID: 3954352005837467852, guid: c6f48ec13f8b5e34cad6d5eb9679d4bc, type: 3}
-      propertyPath: introLines.sentences.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 3954352005837467853, guid: c6f48ec13f8b5e34cad6d5eb9679d4bc, type: 3}
       propertyPath: m_Name
       value: Baddie
