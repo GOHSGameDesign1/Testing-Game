@@ -63,7 +63,7 @@ public class BaddieIntroState : BaddieBaseState
 
     public override IEnumerator CoroutineState(BaddieStateManager baddie)
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(7f);
         baddie.SwitchState(baddie.ImpatientState);
 
         //throw new System.NotImplementedException();
