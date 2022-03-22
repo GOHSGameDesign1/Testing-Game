@@ -18,6 +18,8 @@ public class BaddieStateManager : MonoBehaviour
     // UI/DIALOGUE
     public Text dialogueText;
     public Dialogue introLines;
+    public Dialogue insultLines;
+    public Dialogue impatientLines;
 
     //Changeable mad string based on trigger, each trigger has a unique string. This gets set to that string whenever the trigger gets activated.
     [HideInInspector] public string madString;
