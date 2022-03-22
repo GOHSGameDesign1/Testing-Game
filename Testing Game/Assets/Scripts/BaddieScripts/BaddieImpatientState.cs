@@ -4,12 +4,11 @@ using UnityEngine.SceneManagement;
 
 public class BaddieImpatientState : BaddieBaseState
 {
-    public string[] impatientLines = { "Please hurry up.", "You're wasting my time.", "Can you go any slower?", "Subject appears to be... more sluggish than usual" };
     public override void EnterState(BaddieStateManager baddie)
     {
         if (SceneManager.GetActiveScene().buildIndex < 6)
         {
-            baddie.StartTypeSentence(impatientLines[Random.Range(0, 4)]);
+            baddie.StartTypeSentence(baddie.impatientLines.sentences[Random.Range(0, 6)]);
             baddie.SwitchFace(baddie.AnnoyedFace);
         }
     }

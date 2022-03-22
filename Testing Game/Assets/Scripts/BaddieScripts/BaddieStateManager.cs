@@ -68,6 +68,7 @@ public class BaddieStateManager : MonoBehaviour
 
     public void SwitchState(BaddieBaseState state)
     {
+        StopAllCoroutines();
         currentState = state;
         state.EnterState(this);
         StartCoroutine(currentState.CoroutineState(this));
