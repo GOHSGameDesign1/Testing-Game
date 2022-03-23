@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class BaddieIntroState : BaddieBaseState
 {
-    public string[] introLines = { "Welcome, to pass my tests, get to the square", "Now do some jumping", "Can you make this final jump?", "Have fun walking aimlessly around in the maze.", "That's it! Prepare to get crushed!!! AAHAHAAHAHAHAHAHAH!!!!!", "Ok fine.. you win. I never was a REAL challenge anyways. Just get out of here ok..." };
 
     private int currentBuildIndex;
 
@@ -12,46 +11,31 @@ public class BaddieIntroState : BaddieBaseState
     {
         currentBuildIndex = SceneManager.GetActiveScene().buildIndex;
 
-        if (baddie.playerDiedDuringLevel.value == true)
-        {
-            baddie.SwitchState(baddie.InsultState);
-        }
-        else
-        {
-            //Debug.Log(introLines[Random.Range(0, 3)]);
-            //Debug.Log("INTRO STATE");
-
-            //baddie.dialogueText.text = introLines[0];
-
-            //baddie.StartTypeSentence(introLines[Random.Range(0,3)]);
-
             switch (currentBuildIndex)
             {
                 case 2:
-                    baddie.StartTypeSentence(introLines[0]);
+                    baddie.StartTypeSentence(baddie.introLines.sentences[0]);
                     baddie.SwitchFace(baddie.NeutralFace);
                     break;
                 case 3:
-                    baddie.StartTypeSentence(introLines[1]);
+                    baddie.StartTypeSentence(baddie.introLines.sentences[1]);
                     break;
                 case 4:
-                    baddie.StartTypeSentence(introLines[2]);
+                    baddie.StartTypeSentence(baddie.introLines.sentences[2]);
                     break;
                 case 5:
-                    baddie.StartTypeSentence(introLines[3]);
+                    baddie.StartTypeSentence(baddie.introLines.sentences[3]);
                     break;
                 case 6:
-                    baddie.StartTypeSentence(introLines[4]);
+                    baddie.StartTypeSentence(baddie.introLines.sentences[4]);
                     baddie.SwitchFace(baddie.AngryFace);
                     break;
                 case 7:
-                    baddie.StartTypeSentence(introLines[5]);
+                    baddie.StartTypeSentence(baddie.introLines.sentences[5]);
                     baddie.SwitchFace(baddie.DefeatFace);
                     break;
 
             }
-        }
-
     }
 
     public override void UpdateState(BaddieStateManager baddie)
@@ -62,7 +46,7 @@ public class BaddieIntroState : BaddieBaseState
         }*/
     }
 
-    public override IEnumerator CoroutineState(BaddieStateManager baddie)
+    public override IEnumerator ImpatientTimer(BaddieStateManager baddie)
     {
         yield return new WaitForSeconds(7f);
         baddie.SwitchState(baddie.ImpatientState);
@@ -70,14 +54,4 @@ public class BaddieIntroState : BaddieBaseState
         //throw new System.NotImplementedException();
     }
 
-    public override IEnumerator TypeSentence(BaddieStateManager baddie, string sentence)
-    {
-        baddie.dialogueText.text = "";
-        foreach (char letter in sentence.ToCharArray())
-        {
-            baddie.dialogueText.text += letter;
-            baddie.talkingAudio.Play();
-            yield return new WaitForSeconds(0.03f);
-        }
-    }
 }

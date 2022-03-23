@@ -18,6 +18,8 @@ public class BaddieStateManager : MonoBehaviour
     // UI/DIALOGUE
     public Text dialogueText;
     public Dialogue introLines;
+    public Dialogue insultLines;
+    public Dialogue impatientLines;
 
     //Changeable mad string based on trigger, each trigger has a unique string. This gets set to that string whenever the trigger gets activated.
     [HideInInspector] public string madString;
@@ -53,7 +55,7 @@ public class BaddieStateManager : MonoBehaviour
         // this means the context (This exact monobehavior)
         currentState.EnterState(this);
 
-        StartCoroutine(currentState.CoroutineState(this));
+        StartCoroutine(currentState.ImpatientTimer(this));
 
     }
 
@@ -66,14 +68,28 @@ public class BaddieStateManager : MonoBehaviour
 
     public void SwitchState(BaddieBaseState state)
     {
+        StopAllCoroutines();
         currentState = state;
         state.EnterState(this);
-        StartCoroutine(currentState.CoroutineState(this));
+        StartCoroutine(currentState.ImpatientTimer(this));
     }
 
     public void StartTypeSentence(string sentence)
     {
-        StartCoroutine(currentState.TypeSentence(this, sentence));
+        StartCoroutine(TypeSentence(sentence));
+    }
+
+    IEnumerator TypeSentence(string sentence)
+    {
+        dialogueText.text = "";
+        foreach (char letter in sentence.ToCharArray())
+        {
+            dialogueText.text += letter;
+            talkingAudio.Play();
+            yield return new WaitForSeconds(0.03f);
+
+        }
+        //yield return true;
     }
 
     public void SwitchToMadState(string dialogue, Sprite image)
@@ -82,7 +98,7 @@ public class BaddieStateManager : MonoBehaviour
         madFace = image;
         currentState = MadState;
         MadState.EnterState(this);
-        StartCoroutine(MadState.CoroutineState(this));
+        StartCoroutine(MadState.ImpatientTimer(this));
     }
 
     public void SwitchFace(Sprite image)
@@ -92,7 +108,7 @@ public class BaddieStateManager : MonoBehaviour
 
     public void Defeat()
     {
-        madString = "OW, fine you win. I was never a REAL challenge anyways..";
+        madString = "OK, fine you win. I was never a REAL challenge anyways..";
         madFace = DefeatFace;
         currentState = MadState;
         MadState.EnterState(this);
