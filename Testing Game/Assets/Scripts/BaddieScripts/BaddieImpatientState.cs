@@ -8,8 +8,10 @@ public class BaddieImpatientState : BaddieBaseState
     {
         if (SceneManager.GetActiveScene().buildIndex < 6)
         {
-            baddie.StartTypeSentence(baddie.impatientLines.sentences[Random.Range(0, 6)]);
-            baddie.SwitchFace(baddie.AnnoyedFace);
+            int impatientLine = Random.Range(0, baddie.impatientLines.Length);
+
+            baddie.StartTypeSentence(baddie.impatientLines[impatientLine].sentence);
+            baddie.SwitchFace(baddie.impatientLines[impatientLine].Face);
         }
     }
 

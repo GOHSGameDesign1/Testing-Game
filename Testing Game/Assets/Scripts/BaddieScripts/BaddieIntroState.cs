@@ -10,7 +10,7 @@ public class BaddieIntroState : BaddieBaseState
     public override void EnterState(BaddieStateManager baddie)
     {
         currentBuildIndex = SceneManager.GetActiveScene().buildIndex;
-
+        /*
             switch (currentBuildIndex)
             {
                 case 2:
@@ -35,7 +35,7 @@ public class BaddieIntroState : BaddieBaseState
                     baddie.SwitchFace(baddie.DefeatFace);
                     break;
 
-            }
+            }*/
     }
 
     public override void UpdateState(BaddieStateManager baddie)

@@ -97,34 +97,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDiedDuringLevel: {fileID: 11400000, guid: 00f43fd938e3f1944863f7cd02fe7b4e, type: 2}
-  playerDeathCount: {fileID: 0}
   dialogueText: {fileID: 0}
-  introLines:
-    sentences:
-    - Welcome to my testing simulation. To pass my tests, get to the square
-    - Now do some jumping
-    - Can you make this final jump?
-    - Have fun walking aimlessly around in the maze.
-    - That's it! Prepare to get crushed!!! AAHAHAAHAHAHAHAHAH!!!!!
-    - Ok fine.. you win. I never was a REAL challenge anyways. Just get out of here
-      ok...
-  insultLines:
-    sentences:
-    - Terrible
-    - Are you ok?
-    - Defective
-    - I should've expected less
-    - HOLY ur bad kid
-    - Can you do anything else but die?
-    - I almost feel sorry
   impatientLines:
-    sentences:
-    - Please hurry up.
-    - You're wasting my time.
-    - Can you go any slower?
-    - Subject appears to be... more sluggish than usual
-    - So slowwwwwwwwwwwwwwwwwwwwwwww
-    - Im getting bored
+  - Face: {fileID: 21300000, guid: 84eeced5ea9ef7c49a7c474de088ad11, type: 3}
+    sentence: Please hurry up
+  - Face: {fileID: 21300000, guid: 84eeced5ea9ef7c49a7c474de088ad11, type: 3}
+    sentence: You're wasting my time
+  - Face: {fileID: 21300000, guid: c4e907f271448a04e93af932293787df, type: 3}
+    sentence: Can you go any slower?
+  - Face: {fileID: 21300000, guid: e04b46ff2502b0740a743dc20df29bc4, type: 3}
+    sentence: Subject appears to be... more sluggish than usual
+  - Face: {fileID: 21300000, guid: 63010b23a13dc2347907bb4a6786b3f7, type: 3}
+    sentence: So slowwwwwwwwwwwwwwwwwwwwwwww
+  - Face: {fileID: 21300000, guid: 84eeced5ea9ef7c49a7c474de088ad11, type: 3}
+    sentence: Im getting bored
   madString: OW, fine you win. I was never a REAL challenge anyways..
   spriteRenderer: {fileID: 0}
   NeutralFace: {fileID: 21300000, guid: e04b46ff2502b0740a743dc20df29bc4, type: 3}
