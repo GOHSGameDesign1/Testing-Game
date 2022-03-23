@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDiedDuringLevel: {fileID: 11400000, guid: 00f43fd938e3f1944863f7cd02fe7b4e, type: 2}
+  playerDeathCount: {fileID: 0}
   dialogueText: {fileID: 0}
   introLines:
     sentences:
@@ -112,7 +113,7 @@ MonoBehaviour:
     - Terrible
     - Are you ok?
     - Defective
-    - I should've expected even less
+    - I should've expected less
     - HOLY ur bad kid
     - Can you do anything else but die?
     - I almost feel sorry

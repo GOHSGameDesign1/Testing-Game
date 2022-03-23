@@ -15,7 +15,7 @@ public class BaddieMadState : BaddieBaseState
         
     }
 
-    public override IEnumerator CoroutineState(BaddieStateManager baddie)
+    public override IEnumerator ImpatientTimer(BaddieStateManager baddie)
     {
         yield return new WaitForSeconds(10f);
         baddie.SwitchState(baddie.ImpatientState);

@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;
     public float direction;
     public float JumpForce;
-    private bool isJumping = false;
+    private bool isJumping = true;
     public Animator animator;
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
 
         animator.SetFloat("Velocity", direction);
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) && isJumping == false)
+        if (Input.GetAxis("Jump") > 0 && isJumping == false)
         {
             isJumping = true;
             Jump();

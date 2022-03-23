@@ -9,7 +9,7 @@ public abstract class BaddieBaseState
 
     public abstract void UpdateState(BaddieStateManager baddie);
 
-    public abstract IEnumerator CoroutineState(BaddieStateManager baddie);
+    public abstract IEnumerator ImpatientTimer(BaddieStateManager baddie);
 
 
 }

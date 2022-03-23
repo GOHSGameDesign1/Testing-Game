@@ -11,19 +11,6 @@ public class BaddieIntroState : BaddieBaseState
     {
         currentBuildIndex = SceneManager.GetActiveScene().buildIndex;
 
-        if (baddie.playerDiedDuringLevel.value == true)
-        {
-            baddie.SwitchState(baddie.InsultState);
-        }
-        else
-        {
-            //Debug.Log(introLines[Random.Range(0, 3)]);
-            //Debug.Log("INTRO STATE");
-
-            //baddie.dialogueText.text = introLines[0];
-
-            //baddie.StartTypeSentence(introLines[Random.Range(0,3)]);
-
             switch (currentBuildIndex)
             {
                 case 2:
@@ -49,8 +36,6 @@ public class BaddieIntroState : BaddieBaseState
                     break;
 
             }
-        }
-
     }
 
     public override void UpdateState(BaddieStateManager baddie)
@@ -61,7 +46,7 @@ public class BaddieIntroState : BaddieBaseState
         }*/
     }
 
-    public override IEnumerator CoroutineState(BaddieStateManager baddie)
+    public override IEnumerator ImpatientTimer(BaddieStateManager baddie)
     {
         yield return new WaitForSeconds(7f);
         baddie.SwitchState(baddie.ImpatientState);

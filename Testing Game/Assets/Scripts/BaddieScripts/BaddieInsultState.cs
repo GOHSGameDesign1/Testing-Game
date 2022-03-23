@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class BaddieInsultState : BaddieBaseState
 {
-
+    
     public override void EnterState(BaddieStateManager baddie)
     {
         //Debug.Log(insults[Random.Range(0,3)]);
@@ -19,7 +19,7 @@ public class BaddieInsultState : BaddieBaseState
 
     }
 
-    public override IEnumerator CoroutineState(BaddieStateManager baddie)
+    public override IEnumerator ImpatientTimer(BaddieStateManager baddie)
     {
         yield return new WaitForSeconds(7f);
         baddie.SwitchState(baddie.ImpatientState);

@@ -55,7 +55,7 @@ public class BaddieStateManager : MonoBehaviour
         // this means the context (This exact monobehavior)
         currentState.EnterState(this);
 
-        StartCoroutine(currentState.CoroutineState(this));
+        StartCoroutine(currentState.ImpatientTimer(this));
 
     }
 
@@ -71,7 +71,7 @@ public class BaddieStateManager : MonoBehaviour
         StopAllCoroutines();
         currentState = state;
         state.EnterState(this);
-        StartCoroutine(currentState.CoroutineState(this));
+        StartCoroutine(currentState.ImpatientTimer(this));
     }
 
     public void StartTypeSentence(string sentence)
@@ -87,7 +87,9 @@ public class BaddieStateManager : MonoBehaviour
             dialogueText.text += letter;
             talkingAudio.Play();
             yield return new WaitForSeconds(0.03f);
+
         }
+        //yield return true;
     }
 
     public void SwitchToMadState(string dialogue, Sprite image)
@@ -96,7 +98,7 @@ public class BaddieStateManager : MonoBehaviour
         madFace = image;
         currentState = MadState;
         MadState.EnterState(this);
-        StartCoroutine(MadState.CoroutineState(this));
+        StartCoroutine(MadState.ImpatientTimer(this));
     }
 
     public void SwitchFace(Sprite image)
