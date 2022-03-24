@@ -19,6 +19,8 @@ public class BaddieStateManager : MonoBehaviour
     public Text dialogueText;
     public Dialogue[] introLines;
     public Dialogue[] introLinesMultiple1;
+    public Dialogue[] introLinesMultiple2;
+    public Dialogue[] introLinesMultiple3;
     public Dialogue[] insultLines;
     public Dialogue[] impatientLines;
 
@@ -39,6 +41,9 @@ public class BaddieStateManager : MonoBehaviour
 
     //AUDIO
     public AudioSource talkingAudio;
+
+    public bool typedSentence = false;
+    public bool introPaused;
 
     // Start is called before the first frame update
     void Start()
@@ -89,10 +94,11 @@ public class BaddieStateManager : MonoBehaviour
         {
             dialogueText.text += letter;
             talkingAudio.Play();
-            yield return new WaitForSeconds(0.03f);
+            yield return new WaitForSecondsRealtime(0.03f);
+            
 
         }
-        //yield return true;
+        typedSentence = true;
     }
 
     public void SwitchToMadState(string dialogue, Sprite image)
@@ -109,11 +115,40 @@ public class BaddieStateManager : MonoBehaviour
         spriteRenderer.sprite = image;
     }
 
-    public void Defeat()
+    public void StartTypeMultipleSentence(Dialogue[] dialogueArray)
     {
-        madString = "OK, fine you win. I was never a REAL challenge anyways..";
-        madFace = DefeatFace;
-        currentState = MadState;
-        MadState.EnterState(this);
+        StartCoroutine(TypeMultipleSentences(dialogueArray));
     }
+
+    IEnumerator TypeMultipleSentences(Dialogue[] dialogueArray)
+    {
+        introPaused = true;
+        Time.timeScale = 0;
+        Queue<Dialogue> dialogueQueue = new Queue<Dialogue>();
+        dialogueQueue.Clear();
+
+        foreach(Dialogue dialogue in dialogueArray)
+        {
+            dialogueQueue.Enqueue(dialogue);
+        }
+
+        while(dialogueQueue.Count > 1)
+        {
+            typedSentence = false;
+            Dialogue currentDialogue = dialogueQueue.Dequeue();
+            StartCoroutine(TypeSentence(currentDialogue.sentence));
+            SwitchFace(currentDialogue.Face);
+            yield return new WaitUntil(() => typedSentence);
+            yield return new WaitForSecondsRealtime(2f);
+        }
+
+        Dialogue lastDialogue = dialogueQueue.Dequeue();
+        StartCoroutine(TypeSentence(lastDialogue.sentence));
+        SwitchFace(lastDialogue.Face);
+
+        introPaused = false;
+        Time.timeScale = 1;
+    }
+
+
 }

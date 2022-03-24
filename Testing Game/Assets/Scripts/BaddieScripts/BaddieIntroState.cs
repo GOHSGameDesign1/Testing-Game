@@ -14,8 +14,7 @@ public class BaddieIntroState : BaddieBaseState
             switch (currentBuildIndex)
             {
                 case 2:
-                    baddie.StartTypeSentence(baddie.introLines[0].sentence);
-                    baddie.SwitchFace(baddie.introLines[0].Face);
+                    baddie.StartTypeMultipleSentence(baddie.introLinesMultiple1);
                     break;
                 case 3:
                     baddie.StartTypeSentence(baddie.introLines[1].sentence);
@@ -26,12 +25,10 @@ public class BaddieIntroState : BaddieBaseState
                     baddie.SwitchFace(baddie.introLines[2].Face);
                     break;
                 case 5:
-                    baddie.StartTypeSentence(baddie.introLines[3].sentence);
-                    baddie.SwitchFace(baddie.introLines[3].Face);
+                    baddie.StartTypeMultipleSentence(baddie.introLinesMultiple2);
                     break;
                 case 6:
-                    baddie.StartTypeSentence(baddie.introLines[4].sentence);
-                    baddie.SwitchFace(baddie.introLines[4].Face);
+                    baddie.StartTypeMultipleSentence(baddie.introLinesMultiple3);
                     break;
                 case 7:
                     baddie.StartTypeSentence(baddie.introLines[5].sentence);
@@ -48,6 +45,7 @@ public class BaddieIntroState : BaddieBaseState
 
     public override IEnumerator ImpatientTimer(BaddieStateManager baddie)
     {
+        yield return new WaitUntil(() => baddie.introPaused == false);
         yield return new WaitForSeconds(7f);
         baddie.SwitchState(baddie.ImpatientState);
 

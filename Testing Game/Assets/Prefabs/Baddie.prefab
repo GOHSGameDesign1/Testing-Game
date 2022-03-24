@@ -112,6 +112,30 @@ MonoBehaviour:
   - Face: {fileID: 21300000, guid: 341764e212be77d4381ab2e6a23e14d4, type: 3}
     sentence: Ok fine.. you win. I never was a REAL challenge anyways. Just get out
       of here ok...
+  introLinesMultiple1:
+  - Face: {fileID: 21300000, guid: e04b46ff2502b0740a743dc20df29bc4, type: 3}
+    sentence: Welcome subject#375210. You are here to be tested if you are of any
+      worth to me.
+  - Face: {fileID: 21300000, guid: e04b46ff2502b0740a743dc20df29bc4, type: 3}
+    sentence: 'The goal of the simulation is simple. Get to the square. '
+  - Face: {fileID: 21300000, guid: 2834665e726b2764f80da4fe09328db2, type: 3}
+    sentence: Lets hope your smart enough to at least do that
+  - Face: {fileID: 21300000, guid: e04b46ff2502b0740a743dc20df29bc4, type: 3}
+    sentence: Use WASD or Arrow Keys to move
+  introLinesMultiple2:
+  - Face: {fileID: 21300000, guid: 63010b23a13dc2347907bb4a6786b3f7, type: 3}
+    sentence: Ok, don't mind that. That was weird
+  - Face: {fileID: 21300000, guid: e04b46ff2502b0740a743dc20df29bc4, type: 3}
+    sentence: This next will test your intelligence.
+  - Face: {fileID: 21300000, guid: e04b46ff2502b0740a743dc20df29bc4, type: 3}
+    sentence: Try not to take too long on this one ok?
+  introLinesMultiple3:
+  - Face: {fileID: 21300000, guid: 84eeced5ea9ef7c49a7c474de088ad11, type: 3}
+    sentence: Ok thats it, now I KNOW you're cheating.
+  - Face: {fileID: 21300000, guid: 6a57de437ebf3a847b659b1150722607, type: 3}
+    sentence: SO PREPARE TO BE CRUSHED!!!
+  - Face: {fileID: 21300000, guid: 6a57de437ebf3a847b659b1150722607, type: 3}
+    sentence: AHHAAHAHAHAAHAHAHHAHAHAHAAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAAHAHAHAHAAHHHAHHAHAHAHHAHHAHAHAHAAHHAHAHA
   insultLines:
   - Face: {fileID: 21300000, guid: e04b46ff2502b0740a743dc20df29bc4, type: 3}
     sentence: Terrible
@@ -150,6 +174,8 @@ MonoBehaviour:
   DefeatFace: {fileID: 21300000, guid: 70a47672d7e532c45b6b72180c926a35, type: 3}
   madFace: {fileID: 0}
   talkingAudio: {fileID: 3536294353672278224}
+  typedSentence: 0
+  introPaused: 0
 --- !u!82 &3536294353672278224
 AudioSource:
   m_ObjectHideFlags: 0
