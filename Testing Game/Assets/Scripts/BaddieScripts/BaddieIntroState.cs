@@ -10,40 +10,40 @@ public class BaddieIntroState : BaddieBaseState
     public override void EnterState(BaddieStateManager baddie)
     {
         currentBuildIndex = SceneManager.GetActiveScene().buildIndex;
-        /*
+        
             switch (currentBuildIndex)
             {
                 case 2:
-                    baddie.StartTypeSentence(baddie.introLines.sentences[0]);
-                    baddie.SwitchFace(baddie.NeutralFace);
+                    baddie.StartTypeSentence(baddie.introLines[0].sentence);
+                    baddie.SwitchFace(baddie.introLines[0].Face);
                     break;
                 case 3:
-                    baddie.StartTypeSentence(baddie.introLines.sentences[1]);
+                    baddie.StartTypeSentence(baddie.introLines[1].sentence);
+                    baddie.SwitchFace(baddie.introLines[1].Face);
                     break;
                 case 4:
-                    baddie.StartTypeSentence(baddie.introLines.sentences[2]);
+                    baddie.StartTypeSentence(baddie.introLines[2].sentence);
+                    baddie.SwitchFace(baddie.introLines[2].Face);
                     break;
                 case 5:
-                    baddie.StartTypeSentence(baddie.introLines.sentences[3]);
+                    baddie.StartTypeSentence(baddie.introLines[3].sentence);
+                    baddie.SwitchFace(baddie.introLines[3].Face);
                     break;
                 case 6:
-                    baddie.StartTypeSentence(baddie.introLines.sentences[4]);
-                    baddie.SwitchFace(baddie.AngryFace);
+                    baddie.StartTypeSentence(baddie.introLines[4].sentence);
+                    baddie.SwitchFace(baddie.introLines[4].Face);
                     break;
                 case 7:
-                    baddie.StartTypeSentence(baddie.introLines.sentences[5]);
-                    baddie.SwitchFace(baddie.DefeatFace);
+                    baddie.StartTypeSentence(baddie.introLines[5].sentence);
+                    baddie.SwitchFace(baddie.introLines[5].Face);
                     break;
 
-            }*/
+            }
     }
 
     public override void UpdateState(BaddieStateManager baddie)
     {
-        /*if(baddie.playerDiedDuringLevel.value == true)
-        {
-            baddie.SwitchState(baddie.InsultState);
-        }*/
+
     }
 
     public override IEnumerator ImpatientTimer(BaddieStateManager baddie)
@@ -51,7 +51,7 @@ public class BaddieIntroState : BaddieBaseState
         yield return new WaitForSeconds(7f);
         baddie.SwitchState(baddie.ImpatientState);
 
-        //throw new System.NotImplementedException();
+
     }
 
 }

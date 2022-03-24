@@ -17,8 +17,9 @@ public class BaddieStateManager : MonoBehaviour
 
     // UI/DIALOGUE
     public Text dialogueText;
-    //public Dialogue introLines;
-    //public Dialogue insultLines;
+    public Dialogue[] introLines;
+    public Dialogue[] introLinesMultiple1;
+    public Dialogue[] insultLines;
     public Dialogue[] impatientLines;
 
 

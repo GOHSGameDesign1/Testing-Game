@@ -6,8 +6,10 @@ public class BaddieInsultState : BaddieBaseState
     
     public override void EnterState(BaddieStateManager baddie)
     {
-        //baddie.StartTypeSentence(baddie.insultLines.sentences[Random.Range(0, 7)]);
-        baddie.SwitchFace(baddie.LaughingFace);
+        int insultLine = Random.Range(0, baddie.insultLines.Length);
+
+        baddie.StartTypeSentence(baddie.insultLines[insultLine].sentence);
+        baddie.SwitchFace(baddie.insultLines[insultLine].Face);
     }
 
     public override void UpdateState(BaddieStateManager baddie)
